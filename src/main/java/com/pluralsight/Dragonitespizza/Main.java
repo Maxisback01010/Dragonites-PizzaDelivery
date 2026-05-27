@@ -21,6 +21,7 @@ public class Main {
         );
 
         order .addPizza(pizza1);
+        order .displayOrder();
 
         System.out.println("Enjoy your Pizza!");
 

@@ -13,9 +13,19 @@ public class Pizza extends MenuItem {
 // This is storing the incoming value into this object field
 // This is how inheritance works it's grabbing the variables from Menu to Pizza
 
-    public Pizza(String name, double price, PizzaSize pizza){
+    public Pizza(String name, double price, PizzaSize size) {
         this.name = name;
         this.price = price;
         this.size = size;
     }
+
+// Here I added a tostring that is saying that when printing display it like so
+// In this case I have it displaying my order size, the name of the pizza, and how much the pizzacost
+
+        @Override
+        public String toString() {
+            return size + "" + name + "-$" + price;
+        }
+
+
 }
