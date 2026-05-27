@@ -23,6 +23,14 @@ public class Order {
         pizzas.add(pizza);
     }
 
+// In this section I created a for loop that is saying "for" every pizza in pizzas do something
+// Basically take each pizza object from my pizza list one at a time
+
+public void displayOrder(){
+        for(Pizza pizza : pizzas){
+            System.out.println(pizza);
+        }
+}
 
 
 }
