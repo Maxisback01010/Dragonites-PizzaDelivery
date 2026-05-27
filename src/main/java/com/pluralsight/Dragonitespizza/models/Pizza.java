@@ -24,7 +24,7 @@ public class Pizza extends MenuItem {
 
         @Override
         public String toString() {
-            return size + "" + name + "-$" + price;
+            return size + " " + name + " - $" + String.format("%.2f", price);
         }
 
 
