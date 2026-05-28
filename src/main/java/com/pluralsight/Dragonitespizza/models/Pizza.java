@@ -25,10 +25,11 @@ public class Pizza extends MenuItem {
 
 // Here I added a tostring that is saying that when printing display it like so
 // In this case I have it displaying my order size, the name of the pizza, and how much the pizzacost
+// Now I've updated the string to contain the crustType
 
         @Override
         public String toString() {
-            return size + " " + name + " - $" + String.format("%.2f", price);
+            return size + " " + crustType + " " + name + " - $" + String.format("%.2f", price);
         }
     private CrustType crustType;
 
