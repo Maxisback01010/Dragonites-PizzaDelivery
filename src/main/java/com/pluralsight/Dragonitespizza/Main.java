@@ -1,31 +1,19 @@
 package com.pluralsight.Dragonitespizza;
 
-import com.pluralsight.Dragonitespizza.enums.PizzaSize;
-import com.pluralsight.Dragonitespizza.models.Pizza;
-import com.pluralsight.Dragonitespizza.models.Order;
-
-// Right now this is just placed to test my code to insure everything is running correctly
-//Changes will be made in the future
+import com.pluralsight.Dragonitespizza.ui.HomeScreen;
 
 public class Main {
-    static void main(String[]args){
 
- // In this section I created an order and pizza object
- // Line 23 is where I added pizza into the order this is where the objects are interacting and working together
-        Order order = new Order();
+ //At this point in my code I
 
-        Pizza pizza1 = new Pizza(
-                "Pepperoni Pizza",
-                16.50,
-                PizzaSize.LARGE
-        );
+    public static void main(String[] args) {
 
-        order .addPizza(pizza1);
-        order .displayOrder();
+        HomeScreen homeScreen = new HomeScreen();
 
-        System.out.println("Enjoy your Pizza!");
-
-
-
+        homeScreen.display();
     }
 }
+
+// **Right now this is just placed to test my code to insure everything is running correctly**
+//**Changes will be made in the future**
+
