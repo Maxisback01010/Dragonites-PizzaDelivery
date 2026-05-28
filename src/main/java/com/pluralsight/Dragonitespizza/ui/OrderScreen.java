@@ -8,7 +8,8 @@ public class OrderScreen {
 
     private Scanner scanner;
     private Order order;
-
+//Now Pizzas that are added in the OrderScreen stay stored in that order it becomes a scared object state
+    // this makes easier communication
 public OrderScreen(Order order){
 
     scanner = new Scanner(System.in);
@@ -21,10 +22,10 @@ public OrderScreen(Order order){
     boolean ordering = true;
 
     while(ordering){
-        System.out.println("/n=== ORDER MENU=== ");
+        System.out.println("\n=== ORDER MENU=== ");
         System.out.println("1) Add Pizza");
         System.out.println("2) Checkout");
-        System.out.println("0 Cancel Order");
+        System.out.println("0) Cancel Order");
 
         System.out.print("Choose an option: ");
 

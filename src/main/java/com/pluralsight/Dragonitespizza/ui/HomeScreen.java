@@ -1,5 +1,8 @@
 package com.pluralsight.Dragonitespizza.ui;
 
+import com.pluralsight.Dragonitespizza.models.Order;
+
+
 //In the HomeScreen class I have made it so owns its own menu, loop, and scanner
 
 
@@ -31,8 +34,15 @@ public class HomeScreen {
             // I would have chosen an if than statement
             switch (choice){
 
+                //In case 1 the user chooses "New order" and  the order object was created and gets passed to the order screen
+                // Now at this point the OrderScreen controls the order flow
+
                 case 1:
-                    System.out.println("Starting new order...");
+                    Order order = new Order();
+
+                    OrderScreen orderScreen = new OrderScreen(order);
+
+                    orderScreen.display();
                     break;
                 case 0:
                     System.out.println("Goodbye!");
