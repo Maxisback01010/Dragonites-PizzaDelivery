@@ -272,7 +272,7 @@ public void display(){
 
         pizza.calculatePrice();
 
-        order.addPizza(pizza);
+        order.addItem(pizza);
 
         System.out.println(" Pika Pizza added!");
 
