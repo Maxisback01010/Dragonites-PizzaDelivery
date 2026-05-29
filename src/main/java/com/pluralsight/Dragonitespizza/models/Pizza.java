@@ -31,8 +31,9 @@ public class Pizza extends MenuItem {
     //We added a new constructor "CrustType" to help grow the software for a more complete feel
 
     public Pizza(String name, double price, PizzaSize size,CrustType crustType,SauceType sauceType) {
-        this.name = name;
-        this.price = price;
+
+        super(name, price);
+
         this.size = size;
         this.crustType = crustType;
         this.sauceType = sauceType;

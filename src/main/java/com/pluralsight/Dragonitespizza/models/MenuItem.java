@@ -9,7 +9,15 @@ public class MenuItem {
 
 //I chose to add getPrice method in menu because it holds all menu items and pizza inherits from it
     //This is where price would belong
+public MenuItem(String name, double price) {
 
+    this.name = name;
+    this.price = price;
+}
+    public String getName() {
+
+        return name;
+    }
     public double getPrice() {
 
         return price;

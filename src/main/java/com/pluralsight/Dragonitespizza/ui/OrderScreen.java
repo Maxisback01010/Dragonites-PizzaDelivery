@@ -93,11 +93,11 @@ public void display(){
 
             case 0:
                 ordering = false;
-                System.out.println("Order canceled.");
+                System.out.println(" Metagross canceled your order.");
                 break;
 
             default:
-                System.out.println("Invalid option.");
+                System.out.println(" Porygon says: Invalid option.");
 
 
 
