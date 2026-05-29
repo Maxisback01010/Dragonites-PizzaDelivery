@@ -3,6 +3,8 @@ package com.pluralsight.Dragonitespizza.ui;
 import com.pluralsight.Dragonitespizza.enums.PizzaSize;
 import com.pluralsight.Dragonitespizza.models.Order;
 import com.pluralsight.Dragonitespizza.enums.CrustType;
+import com.pluralsight.Dragonitespizza.models.Pizza;
+
 
 import java.util.Scanner;
 
@@ -20,7 +22,8 @@ public OrderScreen(Order order){
 
 
 }
- public void display(){
+
+public void display(){
 
     boolean ordering = true;
 
@@ -86,8 +89,9 @@ public OrderScreen(Order order){
             default:
                 System.out.println("Invalid option.");
 
-        }
 
+
+        }
 
 
 
@@ -96,6 +100,7 @@ public OrderScreen(Order order){
  }
   // Instead of putting a huge code into a switch statement I wanted to delegate responsibilties into methods
   // My methods should be handling how it happens not what happens
+
     private void addPizza(PizzaSize size) {
 
     //At this point the application is running and it gathering information at the same time
@@ -114,6 +119,8 @@ public OrderScreen(Order order){
 
         switch (crustChoice) {
 
+ //This is just garunteed that the crust type is what it is. This does not give an option for "maybe" crust
+
             case 1:
                 crustType = CrustType.THIN;
                 break;
@@ -129,19 +136,25 @@ public OrderScreen(Order order){
             case 4:
                 crustType = CrustType.CAULIFLOWER;
                 break;
-
+//Here we did the default because if the user types a random input the app does not break
+//return in this is very important as well bc if there is any invalid input the app stops immediately instead of continuing
             default:
                 System.out.println("Invalid crust.");
                 return;
+
+
         }
 
+        Pizza pizza = new Pizza(
+                "Custom Pizza",
+                16.50,
+                size,
+                crustType
+        );
 
+                order.addPizza(pizza);
 
-
-
-
-
-
+        System.out.println(" Pika Pizza added!");
 
     }
 
