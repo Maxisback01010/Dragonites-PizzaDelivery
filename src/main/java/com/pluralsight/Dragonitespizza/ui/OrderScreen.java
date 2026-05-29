@@ -94,6 +94,17 @@ public OrderScreen(Order order){
   // Instead of putting a huge code into a switch statement I wanted to delegate responsibilties into methods
   // My methods should be handling how it happens not what happens
     private void addPizza(PizzaSize size) {
+
+    //At this point the application is running and it gathering information at the same time
+
+        System.out.println("\nChoose Crust:");
+        System.out.println("1) Thin");
+        System.out.println("2) Regular");
+        System.out.println("3) Thick");
+        System.out.println("4) Cauliflower");
+
+        int crustChoice = scanner.nextInt();
+
         System.out.println("Pizza added with size: " + size);
 
 
