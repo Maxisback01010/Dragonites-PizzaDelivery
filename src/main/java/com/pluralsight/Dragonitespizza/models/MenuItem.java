@@ -6,4 +6,16 @@ package com.pluralsight.Dragonitespizza.models;
 public class MenuItem {
     protected String name;
     protected double price;
+
+//I chose to add getPrice method in menu because it holds all menu items and pizza inherits from it
+    //This is where price would belong
+
+    public double getPrice() {
+
+        return price;
+    }
+
+
 }
+
+

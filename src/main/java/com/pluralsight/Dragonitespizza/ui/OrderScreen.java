@@ -262,7 +262,7 @@ public void display(){
         }
 
 
-
+        pizza.calculatePrice();
 
         order.addPizza(pizza);
 
