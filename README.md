@@ -1,5 +1,8 @@
 # Dragonites Pizza Delivery
 
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/f5c1ee8e-53a7-4fa0-b522-2bff5b23256d" />
+
+
 ## Project Description
 
 Dragonites Pizza Delivery is a console based pizza ordering application made in Java. The idea behind this project was to make a fun pizza ordering system inspired by games and pizza apps like Good Pizza Great Pizza, Pokémon Café, and Domino's.
