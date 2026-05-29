@@ -3,6 +3,8 @@ package com.pluralsight.Dragonitespizza.ui;
 import com.pluralsight.Dragonitespizza.enums.PizzaSize;
 import com.pluralsight.Dragonitespizza.enums.SauceType;
 import com.pluralsight.Dragonitespizza.enums.Topping;
+import com.pluralsight.Dragonitespizza.models.Drink;
+import com.pluralsight.Dragonitespizza.models.GarlicKnots;
 import com.pluralsight.Dragonitespizza.models.Order;
 import com.pluralsight.Dragonitespizza.enums.CrustType;
 import com.pluralsight.Dragonitespizza.models.Pizza;
@@ -31,10 +33,11 @@ public void display(){
 
     while(ordering){
         System.out.println("\n=== ORDER MENU=== ");
-        System.out.println("1) Add Pizza");
-        System.out.println("2) Checkout");
+        System.out.println("1) Add a Pika Pizza");
+        System.out.println("2) Add Dratini's Drinks");
+        System.out.println("3) Add Gardevoir Garlic Knots");
+        System.out.println("4) Checkout with Piplup");
         System.out.println("0) Cancel Order");
-
         System.out.print("Choose an option: ");
 
         int choice = scanner .nextInt();
@@ -81,7 +84,29 @@ public void display(){
 
                 break;
 
-            case 2:
+                case 2:
+
+                Drink drink = new Drink("Poke Cola", 2.99);
+
+                order.addItem(drink);
+
+                System.out.println("Drink added!");
+
+                break;
+
+            case 3:
+
+                GarlicKnots knots = new GarlicKnots("Garlic Knots", 5.99);
+
+                order.addItem(knots);
+
+                System.out.println("Gardevoir Knots added!");
+
+                break;
+
+
+
+            case 4:
 
                 order.displayOrder();
 
