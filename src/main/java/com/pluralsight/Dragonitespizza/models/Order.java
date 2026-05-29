@@ -27,9 +27,18 @@ public class Order {
 // Basically take each pizza object from my pizza list one at a time
 
 public void displayOrder(){
+
+//I placed this loop here because order should manage and display not OrderScreen
+    double total = 0;
+
         for(Pizza pizza : pizzas){
+
+            total += pizza.getPrice();
+
             System.out.println(pizza);
         }
+    System.out.println("\nOrder Total: $" + total);
+
 }
 
 

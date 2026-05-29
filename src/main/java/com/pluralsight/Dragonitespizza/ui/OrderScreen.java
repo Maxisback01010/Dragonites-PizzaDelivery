@@ -75,12 +75,20 @@ public void display(){
                 }
 
                 // Pass selected size into method
+
+
                 addPizza(size);
 
                 break;
 
             case 2:
-                System.out.println("Checkout selected.");
+
+                order.displayOrder();
+
+                System.out.println(" Pikachu says: Thank you for your order!");
+
+                ordering = false;
+
                 break;
 
             case 0:
