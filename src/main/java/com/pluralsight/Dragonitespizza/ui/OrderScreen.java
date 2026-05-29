@@ -187,7 +187,7 @@ public void display(){
 
         Pizza pizza = new Pizza(
                 "Custom Pizza",
-                16.50,
+                0,
                 size,
                 crustType,
                 sauceType
