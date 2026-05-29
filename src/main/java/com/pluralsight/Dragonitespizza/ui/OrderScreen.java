@@ -8,6 +8,7 @@ import com.pluralsight.Dragonitespizza.models.GarlicKnots;
 import com.pluralsight.Dragonitespizza.models.Order;
 import com.pluralsight.Dragonitespizza.enums.CrustType;
 import com.pluralsight.Dragonitespizza.models.Pizza;
+import com.pluralsight.Dragonitespizza.services.Receipt;
 
 
 import java.util.Scanner;
@@ -17,9 +18,13 @@ public class OrderScreen {
 
     private Scanner scanner;
     private Order order;
+
+    private Receipt receiptService;
 //Now Pizzas that are added in the OrderScreen stay stored in that order it becomes a scared object state
     // this makes easier communication
 public OrderScreen(Order order){
+
+    receiptService = new Receipt();
 
     scanner = new Scanner(System.in);
     this.order = order;
@@ -109,6 +114,8 @@ public void display(){
             case 4:
 
                 order.displayOrder();
+
+                receiptService.saveReceipt(order);
 
                 System.out.println(" Pikachu says: Thank you for your order!");
 

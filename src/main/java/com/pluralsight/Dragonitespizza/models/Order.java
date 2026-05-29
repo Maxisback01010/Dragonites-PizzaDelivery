@@ -41,6 +41,29 @@ public void displayOrder(){
     System.out.println("\nOrder Total: $" + String.format("%.2f", total));
 
 }
+    @Override
+    public String toString() {
+
+        StringBuilder receipt = new StringBuilder();
+
+        receipt.append("==== DRAGONITE'S PIZZA ====\n\n");
+
+        double total = 0;
+
+        for (MenuItem item : items) {
+
+            receipt.append(item).append("\n");
+
+            total += item.getPrice();
+        }
+
+        receipt.append("\nOrder Total: $")
+                .append(String.format("%.2f", total));
+
+        receipt.append("\n\nPikachu says: Thank you for your order!");
+
+        return receipt.toString();
+    }
 
 
 }
