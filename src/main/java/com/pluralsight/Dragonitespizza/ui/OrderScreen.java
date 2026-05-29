@@ -1,6 +1,7 @@
 package com.pluralsight.Dragonitespizza.ui;
 
 import com.pluralsight.Dragonitespizza.enums.PizzaSize;
+import com.pluralsight.Dragonitespizza.enums.SauceType;
 import com.pluralsight.Dragonitespizza.enums.Topping;
 import com.pluralsight.Dragonitespizza.models.Order;
 import com.pluralsight.Dragonitespizza.enums.CrustType;
@@ -120,7 +121,7 @@ public void display(){
 
         switch (crustChoice) {
 
- //This is just garunteed that the crust type is what it is. This does not give an option for "maybe" crust
+            //This is just garunteed that the crust type is what it is. This does not give an option for "maybe" crust
 
             case 1:
                 crustType = CrustType.THIN;
@@ -141,11 +142,44 @@ public void display(){
 //return in this is very important as well bc if there is any invalid input the app stops immediately instead of continuing
 
 
-
             default:
                 System.out.println("Invalid crust.");
                 return;
 
+        }
+
+
+            System.out.println("\nChoose Sauce:");
+            System.out.println("1) Tomato");
+            System.out.println("2) Alfredo");
+            System.out.println("3) BBQ");
+            System.out.println("4) Pesto");
+
+            int sauceChoice = scanner.nextInt();
+
+            SauceType sauceType;
+
+            switch (sauceChoice) {
+
+                case 1:
+                    sauceType = SauceType.TOMATO;
+                    break;
+
+                case 2:
+                    sauceType = SauceType.ALFREDO;
+                    break;
+
+                case 3:
+                    sauceType = SauceType.BBQ;
+                    break;
+
+                case 4:
+                    sauceType = SauceType.PESTO;
+                    break;
+
+                default:
+                    System.out.println("Invalid sauce.");
+                    return;
 
 
 
@@ -155,7 +189,8 @@ public void display(){
                 "Custom Pizza",
                 16.50,
                 size,
-                crustType
+                crustType,
+                sauceType
         );
 
         System.out.println("\nChoose Toppings:");

@@ -11,6 +11,8 @@ import com.pluralsight.Dragonitespizza.enums.PizzaSize;
 import java.util.ArrayList;
 import com.pluralsight.Dragonitespizza.enums.Topping;
 
+import com.pluralsight.Dragonitespizza.enums.SauceType;
+
 
 // Pizza will automatically inherit Price and Size
 
@@ -22,15 +24,18 @@ public class Pizza extends MenuItem {
 
     private PizzaSize size;
 
+    private SauceType sauceType;
+
 // This is storing the incoming value into this object field
 // This is how inheritance works it's grabbing the variables from Menu to Pizza
     //We added a new constructor "CrustType" to help grow the software for a more complete feel
 
-    public Pizza(String name, double price, PizzaSize size,CrustType crustType) {
+    public Pizza(String name, double price, PizzaSize size,CrustType crustType,SauceType sauceType) {
         this.name = name;
         this.price = price;
         this.size = size;
         this.crustType = crustType;
+        this.sauceType = sauceType;
     }
 
 // Here I added a tostring that is saying that when printing display it like so
@@ -39,7 +44,7 @@ public class Pizza extends MenuItem {
 
         @Override
         public String toString() {
-            return size + " " + crustType + " " + name +" | Toppings: " + toppings + " - $" + String.format("%.2f", price);
+            return size + " " + sauceType + " " + crustType + " " + name +" | Toppings: " + toppings + " - $" + String.format("%.2f", price);
         }
     private CrustType crustType;
 
