@@ -38,7 +38,7 @@ public void displayOrder(){
 
         System.out.println(item);
         }
-    System.out.println("\nOrder Total: $" + total);
+    System.out.println("\nOrder Total: $" + String.format("%.2f", total));
 
 }
 
