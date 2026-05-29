@@ -54,6 +54,30 @@ public class Pizza extends MenuItem {
 
         toppings.add(topping);
     }
+//I added this method in this class because since pizza handles its own size,toppings,sauce, crust
+    //it should also handle its own price
+    public void calculatePrice() {
+
+//This is just the regular prices for the pizza's w/ no add on's
+
+        switch (size) {
+
+            case PERSONAL:
+                price = 8.99;
+                break;
+
+            case MEDIUM:
+                price = 12.99;
+                break;
+
+            case LARGE:
+                price = 16.99;
+                break;
+        }
+//This is just stating the topping cost
+
+        price += toppings.size() * 1.50;
+    }
 
 
 
