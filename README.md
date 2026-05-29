@@ -127,4 +127,3 @@ Customer accounts and saved orders
 
 
 
-Screenshots of the application are included below.
