@@ -2,6 +2,7 @@ package com.pluralsight.Dragonitespizza.ui;
 
 import com.pluralsight.Dragonitespizza.enums.PizzaSize;
 import com.pluralsight.Dragonitespizza.models.Order;
+import com.pluralsight.Dragonitespizza.enums.CrustType;
 
 import java.util.Scanner;
 
@@ -88,6 +89,8 @@ public OrderScreen(Order order){
         }
 
 
+
+
     }
 
  }
@@ -106,6 +109,34 @@ public OrderScreen(Order order){
         int crustChoice = scanner.nextInt();
 
         System.out.println("Pizza added with size: " + size);
+
+        CrustType crustType;
+
+        switch (crustChoice) {
+
+            case 1:
+                crustType = CrustType.THIN;
+                break;
+
+            case 2:
+                crustType = CrustType.REGULAR;
+                break;
+
+            case 3:
+                crustType = CrustType.THICK;
+                break;
+
+            case 4:
+                crustType = CrustType.CAULIFLOWER;
+                break;
+
+            default:
+                System.out.println("Invalid crust.");
+                return;
+        }
+
+
+
 
 
 
