@@ -117,5 +117,14 @@ More menu items
 
 Customer accounts and saved orders
 
+## Planning 
+
+<img width="1268" height="697" alt="image" src="https://github.com/user-attachments/assets/4db77f4f-9d3c-4add-8ebd-932440510297" />
+<img width="690" height="755" alt="image" src="https://github.com/user-attachments/assets/637c0cd6-acd1-4bda-9474-72fdcbf82d33" />
+<img width="597" height="757" alt="image" src="https://github.com/user-attachments/assets/fd3402fc-c894-458d-a2ff-31cc90543112" />
+
+
+
+
 
 Screenshots of the application are included below.
