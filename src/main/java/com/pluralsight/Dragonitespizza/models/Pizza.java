@@ -6,10 +6,20 @@ package com.pluralsight.Dragonitespizza.models;
 import com.pluralsight.Dragonitespizza.enums.CrustType;
 import com.pluralsight.Dragonitespizza.enums.PizzaSize;
 
+//Each Pizza object stores more than one topping
+
+import java.util.ArrayList;
+import com.pluralsight.Dragonitespizza.enums.Topping;
+
 
 // Pizza will automatically inherit Price and Size
 
 public class Pizza extends MenuItem {
+
+    //I added an array list here bc customers might want multiple toppings or none at all
+
+    private ArrayList<Topping> toppings = new ArrayList<>();
+
     private PizzaSize size;
 
 // This is storing the incoming value into this object field
@@ -29,9 +39,14 @@ public class Pizza extends MenuItem {
 
         @Override
         public String toString() {
-            return size + " " + crustType + " " + name + " - $" + String.format("%.2f", price);
+            return size + " " + crustType + " " + name +" | Toppings: " + toppings + " - $" + String.format("%.2f", price);
         }
     private CrustType crustType;
+
+    public void addTopping(Topping topping) {
+
+        toppings.add(topping);
+    }
 
 
 
