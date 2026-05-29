@@ -43,6 +43,8 @@ public class Pizza extends MenuItem {
         }
     private CrustType crustType;
 
+//This Method is saying to give it toppings and it will store it inside pizza
+
     public void addTopping(Topping topping) {
 
         toppings.add(topping);

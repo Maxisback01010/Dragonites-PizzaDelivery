@@ -1,6 +1,7 @@
 package com.pluralsight.Dragonitespizza.ui;
 
 import com.pluralsight.Dragonitespizza.enums.PizzaSize;
+import com.pluralsight.Dragonitespizza.enums.Topping;
 import com.pluralsight.Dragonitespizza.models.Order;
 import com.pluralsight.Dragonitespizza.enums.CrustType;
 import com.pluralsight.Dragonitespizza.models.Pizza;
@@ -138,9 +139,14 @@ public void display(){
                 break;
 //Here we did the default because if the user types a random input the app does not break
 //return in this is very important as well bc if there is any invalid input the app stops immediately instead of continuing
+
+
+
             default:
                 System.out.println("Invalid crust.");
                 return;
+
+
 
 
         }
@@ -152,11 +158,85 @@ public void display(){
                 crustType
         );
 
-                order.addPizza(pizza);
+        System.out.println("\nChoose Toppings:");
+        System.out.println("1) Pepperoni");
+        System.out.println("2) Sausage");
+        System.out.println("3) Bacon");
+        System.out.println("4) Ham");
+        System.out.println("5) Mushrooms");
+        System.out.println("6) Onions");
+        System.out.println("7) Olives");
+        System.out.println("8) Peppers");
+        System.out.println("9) Extra Cheese");
+        System.out.println("0) Done Adding Toppings");
+
+
+        boolean addingToppings = true;
+
+        while (addingToppings) {
+
+            System.out.print("Choose topping: ");
+
+            int toppingChoice = scanner.nextInt();
+
+            switch (toppingChoice) {
+
+                case 1:
+                    pizza.addTopping(Topping.PEPPERONI);
+                    break;
+
+                case 2:
+                    pizza.addTopping(Topping.SAUSAGE);
+                    break;
+
+                case 3:
+                    pizza.addTopping(Topping.BACON);
+                    break;
+
+                case 4:
+                    pizza.addTopping(Topping.HAM);
+                    break;
+
+                case 5:
+                    pizza.addTopping(Topping.MUSHROOMS);
+                    break;
+
+                case 6:
+                    pizza.addTopping(Topping.ONIONS);
+                    break;
+
+                case 7:
+                    pizza.addTopping(Topping.OLIVES);
+                    break;
+
+                case 8:
+                    pizza.addTopping(Topping.PEPPERS);
+                    break;
+
+                case 9:
+                    pizza.addTopping(Topping.EXTRA_CHEESE);
+                    break;
+
+                case 0:
+                    addingToppings = false;
+                    break;
+
+                default:
+                    System.out.println("Invalid topping.");
+            }
+        }
+
+
+
+
+        order.addPizza(pizza);
 
         System.out.println(" Pika Pizza added!");
 
+
+
     }
+
 
 
 }
